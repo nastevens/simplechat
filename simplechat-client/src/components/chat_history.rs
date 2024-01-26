@@ -65,10 +65,7 @@ impl<'a> ChatHistory<'a> {
 
 fn decorate_received<'a>(msg: ReceivedMessage) -> Text<'a> {
     Text::from(vec![
-        Line::styled(
-            format!("{}", msg.author),
-            Style::default().fg(Color::Green),
-        ),
+        Line::styled(msg.author.to_string(), Style::default().fg(Color::Green)),
         Span::raw(msg.text).into(),
         Line::default(),
     ])

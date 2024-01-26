@@ -47,7 +47,7 @@ impl From<SentMessage> for ReceivedMessage {
         let SentMessage { author, text } = value;
         let ts = OffsetDateTime::now_utc()
             .format(&Rfc3339)
-            .unwrap_or(String::new());
+            .unwrap_or_default();
         Self { author, text, ts }
     }
 }
