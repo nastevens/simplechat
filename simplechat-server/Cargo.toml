@@ -1,0 +1,14 @@
+[package]
+name = "simplechat-server"
+authors.workspace = true
+edition.workspace = true
+publish.workspace = true
+version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+futures.workspace = true
+simplechat-protocol.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true

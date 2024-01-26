@@ -1,0 +1,18 @@
+[workspace]
+members = ["simplechat-*"]
+resolver = "2"
+
+[workspace.package]
+authors = ["Nick Stevens <nick@bitcurry.com>"]
+edition = "2021"
+publish = false
+version = "0.1.0"
+
+[workspace.dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+futures = "0.3"
+simplechat-protocol = { path = "simplechat-protocol" }
+thiserror = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-util = { version = "0.7", features = ["codec"], no-default-features = true }
