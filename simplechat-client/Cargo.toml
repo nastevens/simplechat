@@ -1,5 +1,6 @@
 [package]
 name = "simplechat-client"
+rust-version = "1.70"
 authors.workspace = true
 edition.workspace = true
 publish.workspace = true
