@@ -40,7 +40,7 @@ pub(crate) struct App<'a> {
 }
 
 impl<'a> App<'a> {
-    pub async fn connect(addr: impl ToSocketAddrs, user: impl Into<String>) -> Result<Self> {
+    pub async fn connect(addr: impl ToSocketAddrs, user: impl Into<String>) -> Result<App<'a>> {
         let (rx, tx) = tokio::io::split(TcpStream::connect(addr).await?);
         let reader = FramedRead::new(rx, ServerFrameCodec::default());
         let writer = FramedWrite::new(tx, ClientFrameCodec::default());
