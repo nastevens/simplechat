@@ -1,7 +1,6 @@
 /// Widget for getting and displaying user input
 ///
 /// Adapted from the ratatui `user_input.rs` example
-
 use ratatui::{
     prelude::{Buffer, Rect},
     widgets::{Block, BorderType, Borders, Padding, Paragraph, Widget},

@@ -114,7 +114,11 @@ impl Decoder for ServerFrameCodec {
             match verb.as_str() {
                 "receive" => {
                     let [author, text, ts] = destructure_args(args)?;
-                    Ok(Some(ServerFrame::Receive(ReceivedMessage { author, text, ts })))
+                    Ok(Some(ServerFrame::Receive(ReceivedMessage {
+                        author,
+                        text,
+                        ts,
+                    })))
                 }
                 _ => Err(Error::InvalidFrame),
             }

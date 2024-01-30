@@ -14,8 +14,8 @@ mod codec;
 mod model;
 mod util;
 
-pub use codec::{ClientFrame, ServerFrame, ClientFrameCodec, ServerFrameCodec};
-pub use model::{SentMessage, ReceivedMessage};
+pub use codec::{ClientFrame, ClientFrameCodec, ServerFrame, ServerFrameCodec};
+pub use model::{ReceivedMessage, SentMessage};
 
 #[derive(Debug, Error)]
 pub enum Error {
